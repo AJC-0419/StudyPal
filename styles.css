@@ -95,7 +95,7 @@ header div:nth-child(3){
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 45px;
 }
 
 
@@ -121,12 +121,12 @@ header div:nth-child(3){
   right: 25%;
   background-color: #85F366;
   color: black;
-  font-size:1rem;
-  padding-top:3%;
-  padding-bottom:4%;
-  padding-left: 5%;
-  padding-right: 5%;
+  font-size:0.9rem;
+  padding:4% 5%;
   border-radius: 20px;
-  top: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 76%;
   z-index: 1;
 }
