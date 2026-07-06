@@ -7,12 +7,21 @@
     src: url('fonts/instrument-serif/InstrumentSerif-Italic.ttf');
 }
 
+@font-face {
+    font-family: 'Instrument-Sans';
+    src: url('fonts/instrument-sans/InstrumentSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Instrument-Sans-Bold';
+    src: url('fonts/instrument-sans/InstrumentSans-Bold.ttf');
+}
+
 
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    font-family: 'Instrument-Sans';
 }
 #first-page{
     width: 100%;
@@ -23,9 +32,14 @@ html, body {
 }
 
 header{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     padding: 1.3%;
+    background: linear-gradient(#e6f7ec, 60%,transparent);
+    z-index: 1;
 }
 
 
@@ -40,10 +54,10 @@ header div:nth-child(2){
     
 }
 #buttons-center button{
+    font-family: 'Instrument-Sans';
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,30 +69,36 @@ header div:nth-child(3){
 }
 
 #buttons-right button{
+    font-family: 'Instrument-Sans';
+    font-weight: bold;
     background-color: #85F366;
     border: none;
     cursor: pointer;
-    font-weight: bold;
     box-sizing: border-box;
     border-radius: 20px;
     padding-left: 6%;
     padding-right: 6%;
 }
 
-#body-text{
+.body-text{
     display: flex;
     flex-direction: column;
-    width: 25%;
     text-align: center;
     margin: auto;
-    gap: 15px;
 }
 
-#text{
-    line-height: 1;
+#intro{
+    width: 25%;
+    gap: 15px;
+    padding-top: 5%;
 }
-#main-text{
-   font-size: 4rem;
+
+.text{
+    line-height: 1;
+    font-size: 1rem;
+}
+.main-text{
+   font-size:  clamp(2rem, 6vw, 4rem);
    font-family: 'Instrument-Serif';
 }
 
@@ -86,8 +106,8 @@ header div:nth-child(3){
     font-family: 'Instrument-Serif-italic';
 }
 
-.highlight:nth-child(1){
-     text-decoration: underline solid 2px;
+.highlight-underline{
+    text-decoration: underline solid 2px;
     text-underline-offset: 6px;
 }
 
@@ -104,8 +124,7 @@ header div:nth-child(3){
     border: none;
     z-index: 0;
     background-color: transparent;
-    width: 100%;
-    cursor: pointer;    
+    width: 100%;  
     text-align: right;
     margin-left: 5%;
 }
@@ -118,16 +137,168 @@ header div:nth-child(3){
 
 
 #get-study-pal-text{
+font-family: 'Instrument-Sans';
+font-weight: bold;
   position: absolute;
-  right: 25%;
+  right: 28%;
   background-color: #85F366;
   color: black;
   font-size:0.9rem;
-  padding: 4% 5%;
+  padding: 4% 4%;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 76%;
   z-index: 1;
+  box-sizing: border-box;
 }
+
+#second-page{
+   margin:0;
+   overflow: hidden;
+}
+
+#img-second-page{
+    margin: 0;
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    display: block;
+}
+
+
+#second-page-text{
+    position:absolute;
+    width: 45%;
+    gap: 15px;
+    padding-top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+.link_text{
+    cursor: pointer;
+}
+
+#See-how{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#third-page{
+    background-image: url('images/third-layer.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#third-page-text{
+    width: 90%;
+}
+
+#third-page img{
+    padding: 2%;
+}
+
+#text-body{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#additional-info{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:auto auto;
+    padding-bottom: 10%;
+}
+
+
+#info-text{
+    width: 60%;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.buttons-text{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#fourth-page{
+    width: 100%;
+    height: 160%;
+    background-image: url('images/fourth-layer.png');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+#fourth-page-text{
+    width: 30%;
+}
+
+#fifth-page{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/fifth-layer.png');
+    background-size: cover;
+}
+
+
+.Card-body{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto 0 8%;
+    background-image: url('images/Cat-card.png');
+    background-size: cover;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.Card-info{
+    width: 100%;
+    display: flex;
+}
+
+.name-source{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Instrument-Serif';
+    font-size: clamp(1rem, 4vw, 2rem);
+    padding-left: 5%;
+    width: 50%;
+}
+
+.Arrow-cards{
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-card-info{
+    width: 70%;
+    font-size: 1.70rem;
+    text-align: left;
+    line-height: 2;
+    margin-left: 8%;
+}
+
+.Card-body img{
+    padding-left: 5%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
