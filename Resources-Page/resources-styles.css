@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'Instrument-Serif';
-    src: url('fonts/instrument-serif/InstrumentSerif-Regular.ttf');
+    src: url('../fonts/instrument-serif/InstrumentSerif-Regular.ttf');
 }
 @font-face {
     font-family: 'Instrument-Serif-italic';
-    src: url('fonts/instrument-serif/InstrumentSerif-Italic.ttf');
+    src: url('../fonts/instrument-serif/InstrumentSerif-Italic.ttf');
 }
 
 @font-face {
     font-family: 'Instrument-Sans';
-    src: url('fonts/instrument-sans/InstrumentSans-Regular.ttf');
+    src: url('../fonts/instrument-sans/InstrumentSans-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Instrument-Sans-Bold';
-    src: url('fonts/instrument-sans/InstrumentSans-Bold.ttf');
+    src: url('../fonts/instrument-sans/InstrumentSans-Bold.ttf');
 }
 
 
@@ -24,8 +24,6 @@ html, body {
     font-family: 'Instrument-Sans';
 }
 #first-page{
-    width: 100%;
-    height: 100%;
     background-image: url('../images/green_bg.jpg');
     background-size: cover;
     background-position: center;
@@ -87,19 +85,25 @@ header div:nth-child(3){
     margin: auto;
 }
 
-#intro, #sixth-page-text{
+#intro{
     width: 25%;
-    gap: 15px;
-    padding-top: 5%;
+    padding: 7%;
+    
 }
 
 .text{
     line-height: 1;
     font-size: 1rem;
+    margin: 0;
 }
 .main-text{
    font-size:  clamp(2rem, 6vw, 4rem);
    font-family: 'Instrument-Serif';
+   
+}
+
+#intro .main-text {
+    font-size:  clamp(2rem, 6vw, 10rem);
 }
 
 .highlight{
@@ -155,27 +159,70 @@ font-weight: bold;
 }
 
 #second-page{
-   margin:0;
-   overflow: hidden;
+    background-image: url('../images/third-layer.png');
+    background-size: cover;
+    background-position: center;
 }
-
-#img-second-page{
-    margin: 0;
-    width: 100%;
-    object-fit: cover;
-    height: auto;
-    display: block;
-}
-
 
 #second-page-text{
-    position:absolute;
-    width: 45%;
-    gap: 15px;
-    padding-top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
+    width: 40%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#second-page-text .main-text{
+    margin: 0;
+}
+
+#card-catalog{
+    width: 70%;
+    padding-bottom: 5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.card-body{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #D4F6E8; 
+}
+
+.card-body > div{
+    flex: 1;
+}
+
+.card-body > .SITE-title {
+    flex: 0.28;
+}
+.SITE-title{
+    font-size: 3rem;
+    font-family: "Instrument-Serif";
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.card-body > .about-body {
+    flex: 0.6;
+}
+
+.about-body{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.1rem;
+}
+
+.card-body > .SITE-link-to-page {
+    flex: 0.3;
+}
+
+.SITE-link-to-page{
+    text-align: right;
+    padding-bottom: 10%;
+    padding-right: 1%;
 }
 
 
@@ -183,15 +230,8 @@ font-weight: bold;
     cursor: pointer;
 }
 
-#See-how{
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: center;
-    align-items: center;
-}
-
 #third-page{
-    background-image: url('images/third-layer.png');
+    background-image: url('../images/third-layer.png');
     background-size: cover;
     background-position: center;
 }
@@ -233,7 +273,7 @@ font-weight: bold;
 #fourth-page{
     width: 100%;
     height: 160%;
-    background-image: url('images/fourth-layer.png');
+    background-image: url('../images/fourth-layer.png');
     background-size: cover;
     background-position: center bottom;
 }
@@ -245,72 +285,22 @@ font-weight: bold;
 #fifth-page{
     width: 100%;
     height: 100%;
-    background-image: url('images/fifth-layer.png');
+    background-image: url('../images/fifth-layer.png');
     background-size: cover;
 }
 
-
-.Card-body{
-    width: 90%;
-    height: 100%;
-    margin: 0 auto 0 8%;
-    background-image: url('images/Cat-card.png');
-    background-size: cover;
-    padding-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow: hidden;
-}
-
-.Card-info{
-    width: 100%;
-    display: flex;
-}
-
-.name-source{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-family: 'Instrument-Serif';
-    font-size: clamp(1rem, 4vw, 2rem);
-    padding-left: 5%;
-    width: 50%;
-}
-
-.Arrow-cards{
-    width: 35%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-}
-
-.main-card-info{
-    width: 70%;
-    font-size: 1.70rem;
-    text-align: left;
-    line-height: 2;
-    margin-left: 8%;
-}
-
-.Card-body img{
-    padding-left: 5%;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
 
 #sixth-page{
     width: 100%;
     height: 100%;
-    background-image: url('images/Sixth-layer.png');
+    background-image: url('../images/Sixth-layer.png');
     background-size: cover;
     background-position: center;
 }
 
 
 #last-page{
-    background-image: url('images/footer-bg.png');
+    background-image: url('../images/footer-bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -330,6 +320,7 @@ font-weight: bold;
 .footer-info{
     display: flex;
     align-items: center;
+    
 }
 
 .footer-info > div{
