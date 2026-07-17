@@ -23,6 +23,8 @@ html, body {
     padding: 0;
     font-family: 'Instrument-Sans';
 }
+
+
 #first-page{
     background-image: url('../images/green_bg.jpg');
     background-size: cover;
@@ -85,7 +87,7 @@ header div:nth-child(3){
     margin: auto;
 }
 
-#intro{
+#intro, #fourth-page-text{
     width: 25%;
     padding: 7%;
     
@@ -231,13 +233,16 @@ font-weight: bold;
 }
 
 #third-page{
-    background-image: url('../images/third-layer.png');
+    width: 100%;
+    height: 160%;
+    background-image: url('../images/fourth-layer.png');
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
 }
 
 #third-page-text{
-    width: 90%;
+    width: 25%;
+    padding-bottom: 5%;
 }
 
 #third-page img{
@@ -249,14 +254,13 @@ font-weight: bold;
     margin: 0 auto;
 }
 
-#additional-info{
-    width: 95%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns:auto auto;
-    padding-bottom: 10%;
+#See-how{
+    padding-top: 15%;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
 }
-
 
 #info-text{
     width: 60%;
@@ -272,35 +276,15 @@ font-weight: bold;
 
 #fourth-page{
     width: 100%;
-    height: 160%;
-    background-image: url('../images/fourth-layer.png');
-    background-size: cover;
-    background-position: center bottom;
-}
-
-#fourth-page-text{
-    width: 30%;
-}
-
-#fifth-page{
-    width: 100%;
     height: 100%;
-    background-image: url('../images/fifth-layer.png');
-    background-size: cover;
-}
-
-
-#sixth-page{
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/Sixth-layer.png');
+    background-image: url('../images/Sixth-layer-green.png');
     background-size: cover;
     background-position: center;
 }
 
 
 #last-page{
-    background-image: url('../images/footer-bg.png');
+    background-image: url('../images/footer-green-bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
