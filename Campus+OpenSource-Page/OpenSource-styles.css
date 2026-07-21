@@ -1,0 +1,461 @@
+@font-face {
+    font-family: 'Instrument-Serif';
+    src: url('../fonts/instrument-serif/InstrumentSerif-Regular.ttf');
+}
+@font-face {
+    font-family: 'Instrument-Serif-italic';
+    src: url('../fonts/instrument-serif/InstrumentSerif-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Instrument-Sans';
+    src: url('../fonts/instrument-sans/InstrumentSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Instrument-Sans-Bold';
+    src: url('../fonts/instrument-sans/InstrumentSans-Bold.ttf');
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Instrument-Sans';
+}
+
+
+#first-page{
+    background-image: url('../images/green_bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 1.3%;
+    background: linear-gradient(#e6f7ec, 60%,transparent);
+    z-index: 1;
+}
+
+
+header div:nth-child(1){
+    text-align: left;
+}
+header div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    
+}
+#buttons-center button{
+    font-family: 'Instrument-Sans';
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div:nth-child(3){
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+#buttons-right button{
+    font-family: 'Instrument-Sans';
+    font-weight: bold;
+    background-color: #85F366;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.body-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+#intro{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 90%;
+}
+
+.text{
+    line-height: 1;
+    font-size: 1rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-text{
+   font-size:  clamp(2rem, 6vw, 4rem);
+   font-family: 'Instrument-Serif';
+}
+
+#intro .main-text {
+    font-size:  clamp(2rem, 6vw, 10rem);
+}
+
+
+#second-page{
+    background-image: url('../images/pink-second-layer.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#second-page-text{
+    width: 40%;
+    padding-top: 5%;
+}
+
+
+#second-page-text .main-text{
+    margin: 0;
+}
+
+#See-how{
+    padding-top: 3%;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#Contribute-info{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#third-page{
+    color: white;
+    background-image: url('../images/Dark-third-layer.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#third-page-text{
+    width: 80%;
+}
+
+#about{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    line-height: 2;
+}
+
+.about-text{
+    width: 55%;
+    text-align: left;
+}
+
+#about-text-2{
+    width: 82%;
+    font-family: 'Instrument-Sans';
+    text-align: left;
+    line-height: 1.5;
+}
+
+#members{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding-bottom:5%;
+    
+}
+
+#members p{
+    margin: 0;
+}
+
+.about-member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.member-info{
+    font-size: 1rem;
+    width: 60%;
+}
+
+
+.member-info p:nth-of-type(2){
+    line-height: 1;
+}
+
+.about-link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#about-AR{
+    padding-bottom: 10%;
+    
+}
+
+
+#fourth-page{
+    background-image: url('../images/yellow-fourth-layer.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#fourth-page-text{
+    width: 40%;
+}
+
+.app-row{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#Campus-apps{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    padding-top: 5%;
+}
+
+#Campus-apps-2{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, .5fr));
+    align-items: start;
+    padding-bottom: 5%;
+}
+
+.app{
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+
+
+.app p{
+    font-family: "Instrument-Serif";
+    font-size: clamp(2rem, 3.5vw, 4rem);
+    margin: 10px;
+}
+
+#Front-desk-info{
+    width: 90%;
+}
+
+.app span {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+.visit-link{
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.app-icon{
+    width: 60%;
+}
+
+.app-icon-first{
+    width: 80%;
+}
+
+#sixth-page{
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/green_bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#sixth-page-text{
+    width: 30%;
+    gap: 15px;
+    padding-top: 5%;
+}
+
+.text{
+    line-height: 1;
+    font-size: 1rem;
+}
+
+.highlight{
+    font-family: 'Instrument-Serif-italic';
+}
+
+.highlight-underline{
+    text-decoration: underline solid 2px;
+    text-underline-offset: 6px;
+}
+
+.link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+
+
+.get-study-pal {
+    position: relative;
+    border: none;
+    z-index: 0;
+    background-color: transparent;
+    width: 100%;  
+    text-align: right;
+}
+
+.cat-logo{
+    position: relative;
+    z-index: 2;
+    margin-right: 35%;
+}
+
+
+.get-study-pal-text{
+font-family: 'Instrument-Sans';
+font-weight: bold;
+  position: absolute;
+  right: 28%;
+  background-color: #85F366;
+  color: black;
+  font-size:0.9rem;
+  padding: 4% 4%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 76%;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+
+#last-page{
+    background-image: url('../images/footer-green-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+
+
+#last-page-text{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    box-sizing: border-box;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+.footer-info{
+    display: flex;
+    align-items: center;
+    
+}
+
+.footer-info > div{
+    flex: 1;
+}
+
+
+#SITE-info{
+    font-size: 0.8rem;
+    width: 60%;
+}
+
+
+#footer-info-1 button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 25%;
+}
+
+#footer-info-1 div:nth-of-type(2){
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+#footer-info-2{
+    padding-bottom: 10%;
+}
+
+#footer-info-2 div:nth-of-type(1){
+   font-size: 0.97rem;
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-end;
+}
+
+
+.Studypal-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  
+    gap: 20px;  
+    padding-left: 10%;             
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;    
+    color: black;   
+    text-decoration: underline;       
+}
+
+#footer-info-3{
+     display: flex;
+     align-items: center;
+     box-sizing: border-box;
+     padding-top: 2%;
+}
+#footer-info-3 a {
+    text-decoration: underline;    
+    font-size: 0.7rem;          
+}
+#footer-info-3 div:nth-of-type(2){
+    text-align: right;
+}
+
+#a-links-1{
+    display: flex;
+    gap: 30px;
+}
