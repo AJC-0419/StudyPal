@@ -137,8 +137,46 @@ header div:nth-child(3){
     width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
+
+ .content{
+    width: 90%;
+    margin: 0 auto;
+ }
+
+.card-body{
+    background-color: #E6F6D4;
+    padding: 20px 10px;
+}
+
+.card-title{
+    display: flex;
+    flex: 1;
+    padding-bottom: 5%;
+}
+
+.card-title div:nth-of-type(2){
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 30%;
+}
+#Cat-logo-2{
+    position: absolute;
+    top: -8%;
+}
+
+.card-title-text{
+    font-size: clamp(2rem,3vw,4rem);
+    margin: 0;
+}
+
+
 
 #third-page{
     color: white;
