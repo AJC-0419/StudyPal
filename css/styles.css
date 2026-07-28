@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'Instrument-Serif';
-    src: url('fonts/instrument-serif/InstrumentSerif-Regular.ttf');
+    src: url('../fonts/instrument-serif/InstrumentSerif-Regular.ttf');
 }
 @font-face {
     font-family: 'Instrument-Serif-italic';
-    src: url('fonts/instrument-serif/InstrumentSerif-Italic.ttf');
+    src: url('../fonts/instrument-serif/InstrumentSerif-Italic.ttf');
 }
 
 @font-face {
     font-family: 'Instrument-Sans';
-    src: url('fonts/instrument-sans/InstrumentSans-Regular.ttf');
+    src: url('../fonts/instrument-sans/InstrumentSans-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Instrument-Sans-Bold';
-    src: url('fonts/instrument-sans/InstrumentSans-Bold.ttf');
+    src: url('../fonts/instrument-sans/InstrumentSans-Bold.ttf');
 }
 
 
@@ -32,7 +32,7 @@ a{
 #first-page{
     width: 100%;
     height: 100%;
-    background-image: url('images/green_bg.jpg');
+    background-image: url('../images/green_bg.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -203,7 +203,7 @@ font-weight: bold;
 }
 
 #third-page{
-    background-image: url('images/third-layer.png');
+    background-image: url('../images/third-layer.png');
     background-size: cover;
     background-position: center;
 }
@@ -245,7 +245,7 @@ font-weight: bold;
 #fourth-page{
     width: 100%;
     height: 160%;
-    background-image: url('images/fourth-layer.png');
+    background-image: url('../images/fourth-layer.png');
     background-size: cover;
     background-position: center bottom;
 }
@@ -257,7 +257,7 @@ font-weight: bold;
 #fifth-page{
     width: 100%;
     height: 100%;
-    background-image: url('images/fifth-layer.png');
+    background-image: url('../images/fifth-layer.png');
     background-size: cover;
 }
 
@@ -266,7 +266,7 @@ font-weight: bold;
     width: 90%;
     height: 100%;
     margin: 0 auto 0 8%;
-    background-image: url('images/Cat-card.png');
+    background-image: url('../images/Cat-card.png');
     background-size: cover;
     padding-bottom: 5%;
     display: flex;
@@ -315,14 +315,14 @@ font-weight: bold;
 #sixth-page{
     width: 100%;
     height: 100%;
-    background-image: url('images/Sixth-layer.png');
+    background-image: url('../images/Sixth-layer.png');
     background-size: cover;
     background-position: center;
 }
 
 
 #last-page{
-    background-image: url('images/footer-bg.png');
+    background-image: url('../images/footer-bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
