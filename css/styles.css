@@ -59,12 +59,7 @@ header div:nth-child(2){
     gap: 30px;
     
 }
-
-#buttons-center{
-    gap: 41px;
-}
-
-#buttons-center a{
+#buttons-center button{
     font-family: 'Instrument-Sans';
     background-color: transparent;
     border: none;
@@ -72,7 +67,6 @@ header div:nth-child(2){
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 header div:nth-child(3){
     display: flex;
