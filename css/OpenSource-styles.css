@@ -180,9 +180,10 @@ header div:nth-child(3){
 
 #third-page{
     color: white;
-    background-image: url('../images/Dark-third-layer.png');
+    background-image: url('../images/Dark-third-layer-bg.png');
     background-size: cover;
     background-position: center;
+
 }
 
 #third-page-text{
@@ -205,36 +206,6 @@ header div:nth-child(3){
     font-family: 'Instrument-Sans';
     text-align: left;
     line-height: 1.5;
-}
-
-#members{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-    padding-bottom:5%;
-    
-}
-
-#members p{
-    margin: 0;
-}
-
-.about-member{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.member-info{
-    font-size: 1rem;
-    width: 60%;
-}
-
-
-.member-info p:nth-of-type(2){
-    line-height: 1;
 }
 
 .about-link{
