@@ -47,19 +47,63 @@ header{
     background: linear-gradient(#e6f7ec, 60%,transparent);
     z-index: 1;
 }
+.dropdown-wrapper {
+    position: relative;
+}
+.hover-box {
+    position: absolute;
+    background-color: white;
+    width: 200px;              /* fixed width, same everywhere */
+    top: 130%;
+    padding: 24px;              /* fixed padding, same everywhere */
+    display: none !important;
+    flex-direction: column;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.hover-box hr {
+    border: none;
+    height: 0.5px;
+    background-color: #000000; /* Force black */
+    width: 100%;
+}
 
+#hover-1{
+    left: -50%;
+}
+#hover-2{
+    left: -60%;
+}
+#hover-3{
+    left: -10%;
+}
 
-header div:nth-child(1){
+.hover-get-studypal{
+    font: "instrument-sans";
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5%;
+    background-color: transparent;
+}
+
+#buttons-left{
     text-align: left;
 }
-header div:nth-child(2){
+#buttons-center {
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     gap: 30px;
-    
 }
-#buttons-center button{
+
+#buttons-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#buttons-center > .dropdown-wrapper > button{
     font-family: 'Instrument-Sans';
     background-color: transparent;
     border: none;
@@ -67,11 +111,6 @@ header div:nth-child(2){
     display: flex;
     justify-content: center;
     align-items: center;
-}
-header div:nth-child(3){
-    display: flex;
-    justify-content: flex-end;
-    text-align: right;
 }
 
 #buttons-right button{
@@ -84,6 +123,24 @@ header div:nth-child(3){
     border-radius: 20px;
     padding-left: 6%;
     padding-right: 6%;
+}
+
+.hover-links {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.hover-links img {
+    width: 100%;
+    max-width: 20px;
+    justify-self: end;
+    display: block;
+}
+
+
+.dropdown-wrapper:hover .hover-box {
+    display: flex !important;
 }
 
 .body-text{
