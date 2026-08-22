@@ -1,83 +1,8 @@
-@font-face {
-    font-family: 'Instrument-Serif';
-    src: url('../fonts/instrument-serif/InstrumentSerif-Regular.ttf');
-}
-@font-face {
-    font-family: 'Instrument-Serif-italic';
-    src: url('../fonts/instrument-serif/InstrumentSerif-Italic.ttf');
-}
-
-@font-face {
-    font-family: 'Instrument-Sans';
-    src: url('../fonts/instrument-sans/InstrumentSans-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Instrument-Sans-Bold';
-    src: url('../fonts/instrument-sans/InstrumentSans-Bold.ttf');
-}
-
-
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Instrument-Sans';
-}
-
 
 #first-page{
     background-image: url('../images/green_bg.jpg');
     background-size: cover;
     background-position: center;
-}
-
-header{
-    position: fixed;
-    width: 100%;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    padding: 1.3%;
-    background: linear-gradient(#e6f7ec, 60%,transparent);
-    z-index: 1;
-}
-
-
-header div:nth-child(1){
-    text-align: left;
-}
-header div:nth-child(2){
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 30px;
-    
-}
-#buttons-center button{
-    font-family: 'Instrument-Sans';
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header div:nth-child(3){
-    display: flex;
-    justify-content: flex-end;
-    text-align: right;
-}
-
-#buttons-right button{
-    font-family: 'Instrument-Sans';
-    font-weight: bold;
-    background-color: #85F366;
-    border: none;
-    cursor: pointer;
-    box-sizing: border-box;
-    border-radius: 20px;
-    padding-left: 6%;
-    padding-right: 6%;
 }
 
 .body-text{
@@ -158,6 +83,7 @@ header div:nth-child(3){
     display: flex;
     flex: 1;
     padding-bottom: 5%;
+    transition: background-color 0.25s ease;
 }
 
 .card-title div:nth-of-type(2){
@@ -174,6 +100,18 @@ header div:nth-child(3){
 .card-title-text{
     font-size: clamp(2rem,3vw,4rem);
     margin: 0;
+}
+
+.card-body:hover{
+    background-color: #EEFDDF;
+}
+
+.card-title div:nth-of-type(2) img{
+    transition: transform 0.25s ease;
+}
+
+.card-body:hover .card-title div:nth-of-type(2) img{
+    transform: translateX(30px) translateY(-15px);
 }
 
 
