@@ -77,6 +77,8 @@
 .card-body{
     background-color: #E6F6D4;
     padding: 20px 10px;
+    transition: transform 0.50s ease;
+    flex: 0;
 }
 
 .card-title{
@@ -84,6 +86,7 @@
     flex: 1;
     padding-bottom: 5%;
     transition: background-color 0.25s ease;
+
 }
 
 .card-title div:nth-of-type(2){
@@ -93,8 +96,10 @@
     width: 30%;
 }
 #Cat-logo-2{
+    display: flex;
     position: absolute;
     top: -8%;
+    flex: 2;
 }
 
 .card-title-text{
@@ -104,6 +109,9 @@
 
 .card-body:hover{
     background-color: #EEFDDF;
+    transform: scale(1.01);
+    flex: 0;
+
 }
 
 .card-title div:nth-of-type(2) img{

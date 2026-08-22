@@ -22,6 +22,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Instrument-Sans';
+    scroll-behavior: smooth;
 }
 a{
     font-size: 0.84rem;
@@ -126,7 +127,6 @@ header{
     font-family: 'Instrument-Sans';
     font-weight: bold;
     background-color: #85F366;
-    border: 1px solid;
     cursor: pointer;
     box-sizing: border-box;
     border-radius: 20px;
@@ -156,4 +156,14 @@ header{
     transform: translateY(0);
     transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
     pointer-events: auto;
+}
+
+#up-button{
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    background-color: white;
+    padding: 1%;
+    border-radius: 30px;
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
