@@ -9,16 +9,16 @@ StudyPal is a landing website built to introduce and showcase the StudyPal platf
 
 ## 📖 Overview
 
-StudyPal's landing site is a 4-page marketing/informational site designed to introduce visitors to the platform, let them explore its features, download the app, understand its open-source components, and access supporting resources.
+StudyPal's website is a 4-page informational website designed to introduce visitors to the product, a helpful study partner app that includes flashcards, mindmaps, and more. The purpose of the website is to let users know its features, download the app, understand its open-source components, and access supporting resources.
 
 ### Pages
 
 | Page | Description |
 |------|-------------|
-| **Features** | Highlights StudyPal's core features and what it offers to users. |
-| **Getting StudyPal** | Triggered via a **Download** button, this page/flow lets visitors download and get started with StudyPal. |
-| **Open Source** | Details the open-source components of StudyPal, including licensing and contribution info. |
-| **Resources** | A hub for supporting materials — guides, documentation, or other helpful links for users. |
+| **Features** | Highlights StudyPal's core features and what it offers.|
+| **Getting StudyPal** | Triggered via a **Get Studypal** button|
+| **Open Source** | Details the open-source components of StudyPal, including licensing contribution info, and Github repository |
+| **Resources** |Guides, documentation, or other helpful links for users. |
 
 ---
 
@@ -27,7 +27,7 @@ StudyPal's landing site is a 4-page marketing/informational site designed to int
 - **HTML5** 
 - **CSS3** 
 - **JavaScript**
-- **Planned deplyoment** is Vercel
+- **Vercel** is for planned deployment of the website
 
 ---
 
@@ -40,7 +40,7 @@ StudyPal's landing site is a 4-page marketing/informational site designed to int
 - [ ] Complete Download flow for "Getting StudyPal"
 - [ ] Populate Open Source page (licensing, repo links, contribution guide)
 - [ ] Populate Resources page with finalized materials
-- [ ] Final content and copy review
+- [ ] Final content, and Responsiveness of all pages
 - [ ] Official launch
 
 ---
@@ -48,7 +48,9 @@ StudyPal's landing site is a 4-page marketing/informational site designed to int
 ## 📌 Status
 
 **Current phase:** Beta / Work in Progress
+
 **Purpose:** Portfolio demonstration and iterative development toward public launch
+
 **Target Launch Date: End of September 2026**
 
 ---
