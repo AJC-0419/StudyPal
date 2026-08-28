@@ -18,7 +18,7 @@
 #intro, #sixth-page-text{
     width: clamp(300px, 62vw, 500px); 
     gap: 50px;
-    padding-top: 1%;
+    padding-top: 2%;
 }
 
 .text{
