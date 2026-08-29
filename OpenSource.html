@@ -3,11 +3,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus+OpenSource</title>
-    <link rel="stylesheet" href="css/_header-styles.css">
     <link rel="stylesheet" href="css/OpenSource-styles.css">
 </head>
-<body>
-     <div id = "first-page">
+<body class = "popup-open">
+    <div id="container" class="blurred">
+        <div id = "first-page">
+     
         <header>
             <div id="buttons-left">
                 <a href="index.html"><img src="images/logo.jpg" alt="logo" width="50%" id = "logo"></a>
@@ -38,7 +39,9 @@
                          <hr>
                          <div>
                             <button class = "hover-get-studypal">
-                                Get Studypal
+                                <a href="getstudypal.html" >
+                                        Get StudyPal
+                                </a>
                             </button>
                          </div>
                     </div>
@@ -76,7 +79,9 @@
                          <hr>
                          <div>
                             <button class = "hover-get-studypal">
-                                Get Studypal
+                                <a href="getstudypal.html" >
+                                        Get StudyPal
+                                </a>
                             </button>
                          </div>
                     </div>
@@ -98,7 +103,7 @@
                         </div>
                          <div class = "hover-links">
                             <div>
-                                 <a href="#">SITE A&R</a>
+                                 <a href="OpenSource.html#third-page-text">SITE A&R</a>
                             </div>
                             <div>
                                  <img src="images/arrow_forward.png" alt="">
@@ -106,7 +111,7 @@
                          </div>
                            <div class = "hover-links">
                             <div>
-                                 <a href="#">SITE Campus</a>
+                                 <a href="OpenSource.html#fourth-page-text">SITE Campus</a>
                             </div>
                             <div>
                                  <img src="images/arrow_forward.png" alt="">
@@ -115,13 +120,15 @@
                          <hr>
                          <div>
                             <button class = "hover-get-studypal">
-                                Get Studypal
+                                <a href="getstudypal.html" >
+                                        Get StudyPal
+                                </a>
                             </button>
                          </div>
                     </div>
                 </div>
             </div>
-            <div id="buttons-right">
+            <div class="buttons-right" id = "green-btn">
                 <a href="getstudypal.html" >
                          Get StudyPal
                 </a>
@@ -131,9 +138,6 @@
             <a href="#intro">
                 <img src="images/arrow_upward.png" alt="">
             </a>
-        </div>
-        <div id="popup">
-
         </div>
         <div class="body-text" id = "intro">
             <div class="text">
@@ -153,7 +157,7 @@
         <div id="Contribute-info">
               <img src="images/Cat-logo-2.png" alt="" id ="Cat-logo-2" width="20%">
                <div class = "card-body">
-                <div class="content">
+                <div class="content" >
                      <div class="card-title">
                         <div class ="title-text-box">
                             <p class="main-text card-title-text">Open Source</p>
@@ -165,8 +169,8 @@
                        <p>Sharing your sitepak can make it easier for others to start learning what you're studying.</p>
                 </div> 
               </div>
-              <div class = "card-body">
-                <div class="content">
+              <div class = "card-body" id ="share-sitepack">
+                <div class="content" >
                      <div class="card-title">
                         <div class ="title-text-box">
                             <p class="main-text card-title-text">Share your .sitepack</p>
@@ -353,6 +357,32 @@
                 <div>
                     <a href="">Feedback & Bugreport</a>
                 </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="popup">
+        <img src="images/Popup.png" alt="" width="70%" id = "popup-bg">
+        <img src="images/close.png" alt="" width="5%" id = "close">
+        <div id="popup-text">
+            <p id = "popup-title">Share your <u>.sitepak</u></p>
+            <div id = "popup-body">
+            <p>
+                Share your study file with Google Drive, 
+                Messenger attachments, 
+                or your email service of choice.
+            </p>
+            <br>
+            <p>
+                    It only takes 3 cat steps to help your friends, 
+                classmates or batchmates through your own materials. 
+            </p>
+            
+            </div>
+             <div class="buttons-right" id = "green-btn-2">
+                <a>
+                         Okay!
+                </a>
             </div>
         </div>
     </div>

@@ -24,10 +24,67 @@ html, body {
     font-family: 'Instrument-Sans';
     scroll-behavior: smooth;
 }
+
+#container.blurred{
+    filter: blur(6px);
+    pointer-events: none;
+}
 a{
     font-size: 0.84rem;
     text-decoration: none;    
     color: black;     
+}
+#popup{
+    position: fixed;
+    inset: 0;        
+    margin: auto; 
+    width: fit-content;
+    height: fit-content;   
+    z-index: 2;
+}
+#popup-bg{
+    position: relative;
+    display: flex;
+    margin: 0 auto; 
+}
+
+#close{
+    position: absolute;
+    display: flex;
+    top: 10%;
+    right: 19%;
+    cursor: pointer;
+}
+#popup-text{
+    font-family: "Instrument-Serif";
+    position: absolute;
+    inset: 0;   
+    padding-top: 10%; 
+    text-align: center;     
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5%;
+    width: 48%;
+    margin: 0 auto;
+}
+
+#popup-body{
+    font-family: "Instrument-Sans";
+   font-size: 0.9rem;
+}
+#popup-title{
+    font-size: 3rem;
+    margin: 0;
+}
+
+#green-btn-2{
+    width: 100%;
+    margin-top: 5%;
+}
+#green-btn-2 a{
+    padding: 4% 12% 4% 12%;
 }
 
 header{
@@ -108,11 +165,6 @@ header{
     gap: 30px;
 }
 
-#buttons-right{
-    display: flex;
-    justify-content: flex-end;
-}
-
 #buttons-center > .dropdown-wrapper > button{
     font-family: 'Instrument-Sans';
     background-color: transparent;
@@ -123,17 +175,24 @@ header{
     align-items: center;
 }
 
-#buttons-right a{
+.buttons-right a{
     font-family: 'Instrument-Sans';
     font-weight: bold;
     background-color: #85F366;
     cursor: pointer;
     box-sizing: border-box;
     border-radius: 20px;
-    padding-left: 6%;
-    padding-right: 6%;
-   display: flex;
-   align-items: center;
+}
+
+#green-btn a{
+    padding:4% 6% 4% 6%;
+}
+
+#green-btn{
+    display: flex;
+    justify-content: flex-end;
+    text-align:center;
+    align-items: center;
 }
 
 .hover-links {
@@ -247,6 +306,7 @@ header{
     padding: 20px 10px;
     transition: transform 0.50s ease;
     flex: 0;
+    cursor: pointer;
 }
 
 .card-title{
@@ -268,6 +328,7 @@ header{
     position: absolute;
     top: -8%;
     flex: 2;
+    z-index: 10;
 }
 
 .card-title-text{
@@ -558,11 +619,6 @@ hr{
     background-color: black;
 }
 
-a {
-    text-decoration: none;    
-    color: black;      
-}
-
 #footer-info-3{
      display: flex;
      align-items: center;
@@ -580,4 +636,29 @@ a {
 #a-links-1{
     display: flex;
     gap: 30px;
+}
+
+
+@media (max-width: 820px) {
+    #popup{
+        width: min(90%, 600px);
+    }
+    #popup-bg img{
+        width: 100%;
+        display: block;
+    }
+    #popup-text{
+        width: 55%;
+        padding-top: 8%;
+    }
+    #popup-title{
+        font-size: 2.2rem;
+    }
+    #popup-body{
+        font-size: 0.85rem;
+    }
+    #close{
+        right: 20%;
+        top: 10%;
+    }
 }

@@ -25,9 +25,11 @@ html, body {
     scroll-behavior: smooth;
 }
 a{
+     cursor: pointer;   
     font-size: 0.84rem;
     text-decoration: none;    
-    color: black;     
+    color: black;  
+   
 }
 
 header{

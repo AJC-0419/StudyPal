@@ -132,8 +132,8 @@ header{
     border-radius: 20px;
     padding-left: 6%;
     padding-right: 6%;
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .hover-links {
