@@ -24,14 +24,73 @@ html, body {
     font-family: 'Instrument-Sans';
     scroll-behavior: smooth;
 }
+
+#container.blurred{
+    filter: blur(6px);
+    pointer-events: none;
+}
 a{
-     cursor: pointer;   
     font-size: 0.84rem;
     text-decoration: none;    
-    color: black;  
-   
+    color: black;     
+}
+#popup{
+    position: fixed;
+    inset: 0;        
+    margin: auto; 
+    width: fit-content;
+    height: fit-content;   
+    z-index: 2;
+}
+#popup-bg{
+    position: relative;
+    display: flex;
+    margin: 0 auto; 
 }
 
+#close{
+    position: absolute;
+    display: flex;
+    top: 10%;
+    right: 19%;
+    cursor: pointer;
+}
+#popup-text{
+    font-family: "Instrument-Serif";
+    position: absolute;
+    inset: 0;   
+    padding-top: 10%; 
+    text-align: center;     
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 14%;
+    width: 48%;
+    margin: 0 auto;
+}
+#group-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+#popup-body{
+    font-family: "Instrument-Sans";
+    font-size: 0.9rem;
+}
+#popup-title{
+    font-size: 3rem;
+    margin: 0;
+}
+
+#green-btn-2{
+    width: 100%;
+    padding-bottom: 5%;
+}
+#green-btn-2 a{
+    padding: 4% 12% 4% 12%;
+}
 header{
     position: fixed;
     width: 100%;
@@ -41,7 +100,30 @@ header{
     padding: 1.3%;
     background: linear-gradient(#e6f7ec, 60%,transparent);
     z-index: 1;
+    transition: all 0.4s ease-in-out;
 }
+.scrolled header{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+    position: fixed;
+    width: 96vw;
+    box-sizing: border-box;
+    padding: 1% 2%;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 100px;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    transition: all 0.4s ease-in-out; 
+}
+.scrolled header #buttons-center{
+    margin-right: 10vw;
+}
+
 .dropdown-wrapper {
     position: relative;
 }
@@ -110,11 +192,6 @@ header{
     gap: 30px;
 }
 
-#buttons-right{
-    display: flex;
-    justify-content: flex-end;
-}
-
 #buttons-center > .dropdown-wrapper > button{
     font-family: 'Instrument-Sans';
     background-color: transparent;
@@ -125,17 +202,24 @@ header{
     align-items: center;
 }
 
-#buttons-right a{
+.buttons-right a{
     font-family: 'Instrument-Sans';
     font-weight: bold;
     background-color: #85F366;
     cursor: pointer;
     box-sizing: border-box;
     border-radius: 20px;
-    padding-left: 6%;
-    padding-right: 6%;
-   display: flex;
-   align-items: center;
+}
+
+#green-btn a{
+    padding:4% 6% 4% 6%;
+}
+
+#green-btn{
+    display: flex;
+    justify-content: flex-end;
+    text-align:center;
+    align-items: center;
 }
 
 .hover-links {
@@ -150,7 +234,6 @@ header{
     justify-self: end;
     display: block;
 }
-
 
 .dropdown-wrapper:hover .hover-box {
     opacity: 1;
@@ -271,13 +354,12 @@ header{
 
 
 #second-page-text{
-    position:absolute;
-    width: 45%;
-    gap: 15px;
-    padding-top: 30%;
+    position: absolute;
+    width: clamp(280px, 45%, 600px);
+    gap: clamp(10px, 2vw, 15px);
+    padding-top: clamp(20%, 30%, 40%);
     left: 50%;
     transform: translate(-50%, -50%);
-    
 }
 
 
@@ -287,7 +369,7 @@ header{
 
 #See-how{
     display: flex;
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 2.8vw, 1.5rem);
     justify-content: center;
     align-items: center;
 }
@@ -323,7 +405,7 @@ header{
 #info-text{
     width: 60%;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.8vw, 1.5rem);
 }
 
 .buttons-text{
@@ -390,7 +472,7 @@ header{
 
 .main-card-info{
     width: 70%;
-    font-size: 1.70rem;
+    font-size: clamp(1rem, 3vw, 1.7rem);
     text-align: left;
     line-height: 2;
     margin-left: 8%;
@@ -440,7 +522,7 @@ header{
 
 
 #SITE-info{
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1.6vw, 0.8rem);
     width: 60%;
 }
 
@@ -466,7 +548,7 @@ header{
 }
 
 #footer-info-2 div:nth-of-type(1){
-   font-size: 0.97rem;
+   font-size: clamp(0.8rem, 1.9vw, 0.97rem);
    display: flex;
    align-items: flex-end;
    justify-content: flex-end;
@@ -498,7 +580,7 @@ hr{
 }
 #footer-info-3 a {
     text-decoration: underline;    
-    font-size: 0.7rem;          
+    font-size: clamp(0.65rem, 1.4vw, 0.7rem);          
 }
 #footer-info-3 div:nth-of-type(2){
     text-align: right;
@@ -507,4 +589,104 @@ hr{
 #a-links-1{
     display: flex;
     gap: 30px;
+}
+
+#Studypal-logo-mobile{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+@media (max-width: 420px) {
+#container.blurred{
+    filter: blur(6px);
+    pointer-events: none;
+}
+  #popup {
+    display: flex;
+   
+    top: 25%;
+    left: -15%;
+    z-index: 2;
+  }
+
+  header {
+    display: none;
+  }
+
+  #popup-text {
+     background-color: white !important;
+    font-family: "Instrument-Serif";
+    position: absolute;
+    inset: 0;
+    padding-top: 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5%;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #popup-body {
+    font-family: "Instrument-Sans";
+    font-size: 0.85rem;
+  }
+
+  #popup-title {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  #popup-bg {
+    width: 100%;
+  }
+
+  #Studypal-logo-mobile {
+    display: flex;
+    padding-top: -10%;
+  }
+
+  #intro {
+    width: 80%;
+  }
+
+  #intro .text p:nth-of-type(2) {
+    font-size: 1.5rem;
+  }
+
+  #intro .main-text {
+    font-size: 3.5rem;
+  }
+
+  .link_text {
+    display: none;
+  }
+
+  #up-button {
+    display: none;
+  }
+
+  #link-first {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  .get-study-pal-text {
+    font-size: 1.3rem;
+    padding: 0.8em 1.6em;
+  }
+
+  .cat-logo {
+    width: clamp(67px, 13vw, 67px);
+  }
 }

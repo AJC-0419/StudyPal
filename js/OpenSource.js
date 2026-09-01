@@ -19,3 +19,11 @@ shareSitepack.addEventListener('click', () => {
     popup.style.display = 'block';
     container.classList.add('blurred');
 });
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 750) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
