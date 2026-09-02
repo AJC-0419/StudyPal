@@ -42,6 +42,7 @@ a{
     height: fit-content;   
     z-index: 2;
     display: none;
+    overflow: hidden;
 }
 #popup-bg{
     position: relative;
@@ -123,6 +124,9 @@ header{
 }
 .scrolled header #buttons-center{
     margin-right: 10vw;
+}
+.scrolled header #green-btn a {
+    padding: 0.6em 1.2em;
 }
 
 .dropdown-wrapper {

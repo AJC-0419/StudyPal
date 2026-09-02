@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const accept = document.getElementById("green-btn-2");
     const popup = document.getElementById('popup');
     const container = document.getElementById('container');
+    const body = document.body;
 
     if (!accept || !popup || !container) {
         console.warn('Popup elements not found in DOM.');
@@ -11,7 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     accept.addEventListener('click', () => {
         popup.style.display = 'none';
         container.classList.remove('blurred');
+        body.style.overflow = 'visible';
     });
+
+
 
     window.addEventListener('scroll', () => {
         document.body.classList.toggle('scrolled', window.scrollY > 750);
@@ -51,10 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (macInfo.isMac) {
             popup.style.display = 'block';
             container.classList.add('blurred');
+            body.style.overflow = 'hidden';
             document.dispatchEvent(new CustomEvent('macOSDetected', { detail: macInfo }));
         } else {
             popup.style.display = 'none';
             container.classList.remove('blurred');
+            body.style.overflow = 'visible';
         }
     });
 });
