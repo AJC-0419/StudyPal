@@ -41,6 +41,7 @@ a{
     width: fit-content;
     height: fit-content;   
     z-index: 2;
+    display: none;
 }
 #popup-bg{
     position: relative;
