@@ -38,7 +38,7 @@ body{
 a{
     font-size: 0.84rem;
     text-decoration: none;    
-    color: black;     
+    color: black;  
 }
 #popup{
     position: fixed;
@@ -514,8 +514,8 @@ header{
 
 #sixth-page-text{
     width: 30%;
-    gap: 15px;
-    padding-top: 5%;
+    gap: 50px;
+    padding-top: 2%;
 }
 
 .text{
@@ -536,42 +536,51 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 45px;
+    gap: 10px;
 }
 
+.link a:nth-of-type(2){
+   z-index: 3 !important;
+}
+
+
+.cat-logo{
+    position: absolute;
+    top: -140%;    
+    right: 20%;   
+    z-index: 2;
+    width: clamp(24px, 6vw, 39px);
+}
+.get-study-pal-text{
+    font-family: 'Instrument-Sans';
+    font-weight: bold;
+    background-color: #85F366;
+    color: black;
+    font-size: clamp(0.75rem, 2.2vw, 0.9rem);
+    padding: 0.6em 1.3em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    z-index: 1 !important;
+    box-sizing: border-box;
+}
 
 .get-study-pal {
     position: relative;
-    border: none;
-    z-index: 0;
-    background-color: transparent;
-    width: 100%;  
-    text-align: right;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0;
 }
 
-.cat-logo{
-    position: relative;
-    z-index: 2;
-    margin-right: 35%;
-}
-
-
-.get-study-pal-text{
-font-family: 'Instrument-Sans';
-font-weight: bold;
-  position: absolute;
-  right: 28%;
-  background-color: #85F366;
-  color: black;
-  font-size:0.9rem;
-  padding: 4% 4%;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 76%;
-  z-index: 1;
-  box-sizing: border-box;
+.download-arrow{
+    width: clamp(14px, 3vw, 20px);
+    height: auto;
 }
 
 
