@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         body.style.overflow = 'visible';
     });
 
-
-
     window.addEventListener('scroll', () => {
         document.body.classList.toggle('scrolled', window.scrollY > 750);
     });
@@ -48,9 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return { isMac: true, version: versionString, major, minor, patch, versionName };
     }
 
+    var isMacDetected = false; // remembered across both checks
+
+    // --- Mac popup check ---
     window.addEventListener('load', () => {
         const macInfo = detectMacOSVersion();
         console.log('macOS detection result:', macInfo);
+        isMacDetected = macInfo.isMac;
 
         if (macInfo.isMac) {
             popup.style.display = 'block';
@@ -63,4 +65,22 @@ document.addEventListener('DOMContentLoaded', () => {
             body.style.overflow = 'visible';
         }
     });
+
+    // --- Mobile view check, separated so it re-runs on resize too ---
+    function checkMobileView() {
+        var screenWidth = window.innerWidth;
+
+        if (screenWidth < 420) {
+            popup.style.display = 'none';
+            container.classList.add('blurred');
+            body.style.overflow = 'hidden';
+        } else {
+            popup.style.display = isMacDetected ? 'block' : 'none';
+            container.classList.toggle('blurred', isMacDetected);
+            body.style.overflow = isMacDetected ? 'hidden' : 'visible';
+        }
+    }
+
+    window.addEventListener('load', checkMobileView);
+    window.addEventListener('resize', checkMobileView);
 });

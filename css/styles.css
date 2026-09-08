@@ -258,12 +258,13 @@ header{
     border-radius: 30px;
      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-#first-page{
-    width: 100%;
-    height: 100%;
+#first-page, #sixth-page{
     background-image: url('../images/green_bg.jpg');
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -275,9 +276,11 @@ header{
 }
 
 #intro, #sixth-page-text{
-    width: clamp(300px, 62vw, 500px); 
+    width: clamp(300px, 58vw, 500px); 
     gap: 50px;
-    padding-top: 2%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    border:1px solid;
 }
 
 .text{
@@ -491,11 +494,7 @@ header{
 }
 
 #sixth-page{
-    width: 100%;
-    height: 100%;
     background-image: url('../images/Sixth-layer.png');
-    background-size: cover;
-    background-position: center;
 }
 
 #get-study-pal-2 .get-study-pal-text{
@@ -611,51 +610,54 @@ hr{
     align-items: center;
     display: none;
 }
-@media (max-width: 420px) {
-#container.blurred{
-    filter: blur(6px);
-    pointer-events: none;
+
+
+#mobile-view{
+    display: none;
 }
-  #popup {
+@media (max-width: 420px) {
+
+#mobile-view{
     display: flex;
-   
-    top: 25%;
-    left: -15%;
-    z-index: 2;
-  }
+    position: fixed;
+    bottom: 0;     
+    background-color: white;
+    width: 100%;
+    height: 70%;
+    z-index: 10;
+}
+
+#mobile-view-content{
+    padding-top: 20%;
+    width:90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#mobile-title{
+    font-size: 3rem;
+    font-family: 'Instrument-Serif';
+}
+
+#mobile-body{
+    font-size: 1.2rem;
+}
+
+#close-mobile{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+#cat-logo-mobile{
+    position: absolute;
+    top: -10%;
+ 
+}   
 
   header {
     display: none;
-  }
-
-  #popup-text {
-     background-color: white !important;
-    font-family: "Instrument-Serif";
-    position: absolute;
-    inset: 0;
-    padding-top: 10%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 5%;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  #popup-body {
-    font-family: "Instrument-Sans";
-    font-size: 0.85rem;
-  }
-
-  #popup-title {
-    font-size: 2rem;
-    margin: 0;
-  }
-
-  #popup-bg {
-    width: 100%;
   }
 
   #Studypal-logo-mobile {
