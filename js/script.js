@@ -3,11 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const popup = document.getElementById('popup');
     const container = document.getElementById('container');
     const body = document.body;
+    const closebtn = document.getElementsByClassName('close');
+    const mobileView = document.getElementById('mobile-view');
 
     if (!accept || !popup || !container) {
         console.warn('Popup elements not found in DOM.');
         return;
     }
+     Array.from(closebtn).forEach((btn) => {
+    btn.addEventListener('click', () => {
+        if (btn.closest('#popup')) {
+            popup.style.display = 'none';
+            container.classList.remove('blurred');
+            body.style.overflow = 'visible';
+        } else if (btn.closest('#mobile-view')) {
+            mobileView.style.display = 'none';
+            container.classList.remove('blurred');
+            body.style.overflow = 'visible';
+        }
+    });
+});
 
     accept.addEventListener('click', () => {
         popup.style.display = 'none';
@@ -16,7 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('scroll', () => {
-        document.body.classList.toggle('scrolled', window.scrollY > 750);
+        if(screen.width < 420) {
+            document.body.classList.remove('scrolled');
+            return;
+        }
+        else{
+         document.body.classList.toggle('scrolled', window.scrollY > 750);
+
+        }
     });
 
     function detectMacOSVersion() {
@@ -80,7 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
             body.style.overflow = isMacDetected ? 'hidden' : 'visible';
         }
     }
+   
 
     window.addEventListener('load', checkMobileView);
     window.addEventListener('resize', checkMobileView);
+    
 });

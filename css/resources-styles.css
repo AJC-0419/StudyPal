@@ -190,12 +190,13 @@ header{
     background-color: white;
     padding: 1%;
     border-radius: 30px;
-     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 #first-page{
     background-image: url('../images/green_bg.jpg');
     background-size: cover;
     background-position: center;
+    
 }
 
 .body-text{
@@ -203,27 +204,24 @@ header{
     flex-direction: column;
     text-align: center;
     margin: auto;
+
 }
 
+
 #intro, #fourth-page-text{
-    width: 25%;
-    padding: 7%;
-    
+    width: clamp(300px, 58vw, 450px); 
+    padding: 10%;
+    gap: 50px; 
 }
 
 .text{
-    line-height: 1;
-    font-size: 1rem;
-    margin: 0;
+    line-height: 1.3;
+    font-size: clamp(.7rem, 2vw, 1.1rem); 
 }
 .main-text{
-   font-size:  clamp(2rem, 6vw, 4rem);
+   font-size:  clamp(2rem, 6vw, 5rem);
    font-family: 'Instrument-Serif';
-   
-}
-
-#intro .main-text {
-    font-size:  clamp(2rem, 6vw, 10rem);
+   line-height: 1.1;
 }
 
 .highlight{
@@ -239,43 +237,51 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 45px;
+    gap: 10px;
 }
 
+.link a:nth-of-type(2){
+   z-index: 3 !important;
+}
+
+
+.cat-logo{
+    position: absolute;
+    top: -140%;    
+    right: 20%;   
+    z-index: 2;
+    width: clamp(24px, 6vw, 39px);
+}
+.get-study-pal-text{
+    font-family: 'Instrument-Sans';
+    font-weight: bold;
+    background-color: #85F366;
+    color: black;
+    font-size: clamp(0.75rem, 2.2vw, 0.9rem);
+    padding: 0.6em 1.3em;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    z-index: 1 !important;
+    box-sizing: border-box;
+}
 
 .get-study-pal {
     position: relative;
-    border: none;
-    z-index: 0;
-    background-color: transparent;
-    width: 100%;  
-    text-align: right;
-    margin-left: 5%;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0;
 }
 
-.cat-logo{
-    position: relative;
-    z-index: 2;
-    margin-right: 35%;
-}
-
-
-.get-study-pal-text{
-font-family: 'Instrument-Sans';
-font-weight: bold;
-  position: absolute;
-  right: 28%;
-  background-color: #85F366;
-  color: black;
-  font-size:0.9rem;
-  padding: 4% 4%;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 76%;
-  z-index: 1;
-  box-sizing: border-box;
+.download-arrow{
+    width: clamp(14px, 3vw, 20px);
+    height: auto;
 }
 
 #second-page{
@@ -319,7 +325,7 @@ font-weight: bold;
     flex: 0.28;
 }
 .SITE-title{
-    font-size: 3rem;
+    font-size: clamp(1.2rem, 3vw, 4rem);
     font-family: "Instrument-Serif";
     padding-left: 5%;
     padding-right: 5%;
@@ -331,8 +337,9 @@ font-weight: bold;
 
 .about-body{
     padding-left: 5%;
-    padding-right: 5%;
-    font-size: 1.1rem;
+    padding-right: 5%;    
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+
 }
 
 .card-body > .SITE-link-to-page {
@@ -352,38 +359,34 @@ font-weight: bold;
 
 #third-page{
     width: 100%;
-    height: 160%;
+    height: 180%;
     background-image: url('../images/fourth-layer.png');
     background-size: cover;
     background-position: center bottom;
 }
 
 #third-page-text{
-    width: 25%;
-    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 40%;
+    border: 1px solid black;
+    gap: 30px;
 }
 
-#third-page img{
-    padding: 2%;
+#third-page-text .text p:nth-of-type(2){
+   width: 90%;
+   margin: 0 auto;
 }
 
 #text-body{
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
 #See-how{
-    padding-top: 15%;
     display: flex;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 2rem);
     justify-content: center;
     align-items: center;
-}
-
-#info-text{
-    width: 60%;
-    text-align: left;
-    font-size: 1.5rem;
 }
 
 .buttons-text{
@@ -393,11 +396,13 @@ font-weight: bold;
 }
 
 #fourth-page{
-    width: 100%;
-    height: 100%;
     background-image: url('../images/Sixth-layer-green.png');
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
@@ -422,7 +427,6 @@ font-weight: bold;
 .footer-info{
     display: flex;
     align-items: center;
-    
 }
 
 .footer-info > div{
@@ -431,7 +435,7 @@ font-weight: bold;
 
 
 #SITE-info{
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1.6vw, 0.8rem);
     width: 60%;
 }
 
@@ -457,7 +461,7 @@ font-weight: bold;
 }
 
 #footer-info-2 div:nth-of-type(1){
-   font-size: 0.97rem;
+   font-size: clamp(0.8rem, 1.9vw, 0.97rem);
    display: flex;
    align-items: flex-end;
    justify-content: flex-end;
@@ -479,10 +483,7 @@ hr{
     background-color: black;
 }
 
-a {
-    text-decoration: none;    
-    color: black;          
-}
+
 
 #footer-info-3{
      display: flex;
@@ -492,7 +493,7 @@ a {
 }
 #footer-info-3 a {
     text-decoration: underline;    
-    font-size: 0.7rem;          
+    font-size: clamp(0.65rem, 1.4vw, 0.7rem);          
 }
 #footer-info-3 div:nth-of-type(2){
     text-align: right;
