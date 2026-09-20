@@ -358,15 +358,13 @@ header{
 }
 
 #third-page{
-    width: 100%;
-    height: 180%;
     background-image: url('../images/fourth-layer.png');
     background-size: cover;
     background-position: center bottom;
 }
 
 #third-page-text{
-    padding-top: 5%;
+    padding-bottom: 58%;
     width: 40%;
     border: 1px solid black;
     gap: 30px;
