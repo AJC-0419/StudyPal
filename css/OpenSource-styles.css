@@ -35,11 +35,7 @@ body{
     pointer-events: none;
     
 }
-a{
-    font-size: 0.84rem;
-    text-decoration: none;    
-    color: black;  
-}
+
 #popup{
     position: fixed;
     inset: 0;        
@@ -120,7 +116,7 @@ header{
     backdrop-filter: blur(10px);
     border-radius: 100px;
     margin-top: 1vh;
-    margin-left: 1vw;
+    margin-left: 1.5vw;
     transition: all 0.4s ease-in-out; 
 }
 .scrolled header #buttons-center{
@@ -340,7 +336,6 @@ header{
     padding: 20px 10px;
     transition: transform 0.50s ease;
     flex: 0;
-    cursor: pointer;
 }
 
 .card-title{
@@ -385,7 +380,14 @@ header{
     transform: translateX(30px) translateY(-15px);
 }
 
+.link{
+    font-size: 0.84rem;
+}
 
+a{
+    text-decoration: none;    
+    color: black;  
+}
 
 #third-page{
     color: white;

@@ -57,7 +57,7 @@ header{
     backdrop-filter: blur(10px);
     border-radius: 100px;
     margin-top: 1vh;
-    margin-left: 1vw;
+    margin-left: 1.5vw;
     transition: all 0.4s ease-in-out; 
 }
 .scrolled header #buttons-center{
@@ -379,13 +379,3 @@ hr{
     gap: 30px;
 }
 
-#Studypal-logo-mobile{
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
