@@ -307,20 +307,20 @@ header{
     margin: 0;
 }
 
-#See-how{
-    padding-top: 3%;
+#See-how {
+    padding-top: clamp(12px, 3%, 40px);
     display: flex;
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 1rem + 1vw, 1.5rem);
     justify-content: center;
     align-items: center;
 }
 
 #Contribute-info{
-    width: 80%;
+    width: clamp(80%, 90%, 1000px);
     margin: 0 auto;
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 50px;
+    gap: clamp(16px, 3vw, 50px);
     position: relative;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -331,26 +331,25 @@ header{
     margin: 0 auto;
  }
 
-.card-body{
+.card-body {
     background-color: #E6F6D4;
-    padding: 20px 10px;
+    padding: clamp(12px, 2vw, 20px) clamp(8px, 1.5vw, 10px);
     transition: transform 0.50s ease;
     flex: 0;
 }
 
-.card-title{
+.card-title {
     display: flex;
     flex: 1;
-    padding-bottom: 5%;
+    padding-bottom: clamp(4px, 5%, 16px);
     transition: background-color 0.25s ease;
-
 }
 
-.card-title div:nth-of-type(2){
+.card-title div:nth-of-type(2) {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    width: 30%;
+    width: clamp(25%, 30%, 35%);
 }
 #Cat-logo-2{
     display: flex;
