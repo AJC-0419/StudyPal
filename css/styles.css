@@ -536,14 +536,14 @@ header{
 }
 
 
-#footer-info-1 button{
+#footer-info-1 button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px;
+    gap: clamp(8px, 2vw, 20px);
     background-color: transparent;
     border-radius: 20px;
-    width: 25%;
+    width: clamp(120px, 9vw, 170px);
 }
 
 #footer-info-1 div:nth-of-type(2){

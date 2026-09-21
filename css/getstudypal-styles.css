@@ -433,7 +433,6 @@ body{
 .footer-info{
     display: flex;
     align-items: center;
-    
 }
 
 .footer-info > div{
@@ -442,19 +441,19 @@ body{
 
 
 #SITE-info{
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1.6vw, 0.8rem);
     width: 60%;
 }
 
 
-#footer-info-1 button{
+#footer-info-1 button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px;
+    gap: clamp(8px, 2vw, 20px);
     background-color: transparent;
     border-radius: 20px;
-    width: 25%;
+    width: clamp(120px, 9vw, 170px);
 }
 
 #footer-info-1 div:nth-of-type(2){
@@ -468,7 +467,7 @@ body{
 }
 
 #footer-info-2 div:nth-of-type(1){
-   font-size: 0.97rem;
+   font-size: clamp(0.8rem, 1.9vw, 0.97rem);
    display: flex;
    align-items: flex-end;
    justify-content: flex-end;
@@ -490,10 +489,7 @@ hr{
     background-color: black;
 }
 
-a {
-    text-decoration: none;    
-    color: black;      
-}
+
 
 #footer-info-3{
      display: flex;
@@ -503,7 +499,7 @@ a {
 }
 #footer-info-3 a {
     text-decoration: underline;    
-    font-size: 0.7rem;          
+    font-size: clamp(0.65rem, 1.4vw, 0.7rem);          
 }
 #footer-info-3 div:nth-of-type(2){
     text-align: right;
@@ -514,4 +510,37 @@ a {
     gap: 30px;
 }
 
+#Studypal-logo-mobile{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
 
+@media (max-width: 820px) {
+    #popup{
+        width: min(90%, 600px);
+    }
+    #popup-bg img{
+        width: 100%;
+        display: block;
+    }
+    #popup-text{
+        width: 55%;
+        padding-top: 8%;
+    }
+    #popup-title{
+        font-size: 2.2rem;
+    }
+    #popup-body{
+        font-size: 0.85rem;
+    }
+    #close{
+        right: 20%;
+        top: 10%;
+    }
+}

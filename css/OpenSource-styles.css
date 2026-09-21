@@ -391,8 +391,6 @@ header{
     color: white;
     background-image: url('../images/Dark-third-layer-bg.png');
     background-size: cover;
-    background-position: center;
-
 }
 
 #third-page-text{
@@ -593,7 +591,6 @@ header{
     align-items: center;    
 }
 
-
 #last-page-text{
     display: flex;
     flex-direction: column;
@@ -605,7 +602,6 @@ header{
 .footer-info{
     display: flex;
     align-items: center;
-    
 }
 
 .footer-info > div{
@@ -614,19 +610,19 @@ header{
 
 
 #SITE-info{
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1.6vw, 0.8rem);
     width: 60%;
 }
 
 
-#footer-info-1 button{
+#footer-info-1 button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px;
+    gap: clamp(8px, 2vw, 20px);
     background-color: transparent;
     border-radius: 20px;
-    width: 25%;
+    width: clamp(120px, 9vw, 170px);
 }
 
 #footer-info-1 div:nth-of-type(2){
@@ -640,7 +636,7 @@ header{
 }
 
 #footer-info-2 div:nth-of-type(1){
-   font-size: 0.97rem;
+   font-size: clamp(0.8rem, 1.9vw, 0.97rem);
    display: flex;
    align-items: flex-end;
    justify-content: flex-end;
@@ -662,6 +658,8 @@ hr{
     background-color: black;
 }
 
+
+
 #footer-info-3{
      display: flex;
      align-items: center;
@@ -670,7 +668,7 @@ hr{
 }
 #footer-info-3 a {
     text-decoration: underline;    
-    font-size: 0.7rem;          
+    font-size: clamp(0.65rem, 1.4vw, 0.7rem);          
 }
 #footer-info-3 div:nth-of-type(2){
     text-align: right;
