@@ -399,7 +399,7 @@ a{
 }
 
 #about{
-    font-size: 1.5rem;
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
     font-weight: lighter;
     line-height: 2;
 }
