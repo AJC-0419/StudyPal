@@ -531,11 +531,7 @@ a{
     line-height: 1.3;
     font-size: clamp(.7rem, 2vw, 1.1rem); 
 }
-.main-text{
-   font-size:  clamp(2rem, 6vw, 5rem);
-   font-family: 'Instrument-Serif';
-   line-height: 1.1;
-}
+
 
 .highlight{
     font-family: 'Instrument-Serif-italic';
