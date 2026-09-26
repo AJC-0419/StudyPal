@@ -714,4 +714,9 @@ hr{
         right: 20%;
         top: 10%;
     }
+
+    #contribute-info{
+        grid-template-columns: none;
+        grid-template-rows: auto auto auto;
+    }
 }
