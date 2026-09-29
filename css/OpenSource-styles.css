@@ -25,7 +25,11 @@ html, body {
     scroll-behavior: smooth;
    
 }
-
+a{
+    font-size: 0.84rem;
+    text-decoration: none;    
+    color: black;  
+}
 body{
      overflow: hidden;
 }
@@ -129,6 +133,7 @@ header{
 
 .dropdown-wrapper {
     position: relative;
+    display: flex;
 }
 .dropdown-wrapper::after {
     content: "";
@@ -156,7 +161,8 @@ header{
     transform: translateY(-6px);         
     transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
     pointer-events: none;     
-    gap: 20px;           
+    gap: 20px;    
+   
 }
 .hover-box hr {
     border: none;
@@ -193,6 +199,16 @@ header{
     justify-content: center;
     align-items: center;
     gap: 30px;
+}
+
+.main-button{
+    display: flex;
+    gap: 5px;
+    padding-bottom: 12%;
+}
+
+#opensource-btn{
+    padding-bottom: 7%;
 }
 
 #buttons-center > .dropdown-wrapper > button{
@@ -239,12 +255,22 @@ header{
 }
 
 
-.dropdown-wrapper:hover .hover-box {
+
+.dropdown-wrapper:hover:not(.force-closed) .hover-box,
+.dropdown-wrapper.open .hover-box {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
     pointer-events: auto;
+}
+
+/* Optional: flip the arrow when open */
+.arrow-down {
+    transition: transform 0.15s ease;
+}
+.dropdown-wrapper.open .arrow-down {
+    transform: rotate(180deg);
 }
 
 #up-button{
@@ -341,6 +367,7 @@ header{
 .card-title {
     display: flex;
     flex: 1;
+    width: 100%;
     padding-bottom: clamp(4px, 5%, 16px);
     transition: background-color 0.25s ease;
 }
@@ -349,7 +376,7 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    width: clamp(25%, 30%, 35%);
+    width:80%;
 }
 #Cat-logo-2{
     display: flex;
@@ -469,7 +496,9 @@ a{
     gap: 10px;
 }
 
-
+.app span{
+    font-size: clamp(0.7rem, 2vw, 1rem)
+}
 
 .app p{
     font-family: "Instrument-Serif";
@@ -493,7 +522,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 .app-icon{
     width: 60%;
@@ -718,5 +747,8 @@ hr{
     #contribute-info{
         grid-template-columns: none;
         grid-template-rows: auto auto auto;
+    }
+    #Cat-logo-2{
+        top: -4%;
     }
 }
