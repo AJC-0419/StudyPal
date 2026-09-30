@@ -265,7 +265,6 @@ header{
     pointer-events: auto;
 }
 
-/* Optional: flip the arrow when open */
 .arrow-down {
     transition: transform 0.15s ease;
 }

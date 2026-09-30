@@ -199,7 +199,6 @@ header{
     pointer-events: auto;
 }
 
-/* Optional: flip the arrow when open */
 .arrow-down {
     transition: transform 0.15s ease;
 }
@@ -379,7 +378,7 @@ body{
 
 
  .next-steps p{
-    font-size: 2.2rem;
+    font-size: clamp(1rem, 2vw, 2.2rem);
     width: 75%;
     padding: 0;
     margin: 0;
@@ -414,6 +413,10 @@ body{
     position: absolute;
     bottom: 5%;
     right: 8%;
+}
+
+#cat-bottom-logo img{
+     width: clamp(70%, 2vw, 100%);
 }
 
 .round-box{
