@@ -3,78 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const popup = document.getElementById('popup');
     const container = document.getElementById('container');
     const body = document.body;
-    const closebtn = document.getElementsByClassName('close');
+    const closebtn = document.querySelectorAll('.close');
     const mobileView = document.getElementById('mobile-view');
-const dropdowns = document.querySelectorAll('.dropdown-wrapper');
-
-dropdowns.forEach(wrapper => {
-    const arrow = wrapper.querySelector('.arrow-down');
-    if (!arrow) return;
-
-    arrow.addEventListener('click', () => {
-        const isShowing =
-            wrapper.classList.contains('open') ||
-            (wrapper.matches(':hover') && !wrapper.classList.contains('force-closed'));
-
-        if (isShowing) {
-            // Close it, and suppress hover until the mouse leaves
-            wrapper.classList.remove('open');
-            wrapper.classList.add('force-closed');
-        } else {
-            wrapper.classList.add('open');
-            wrapper.classList.remove('force-closed');
-        }
-    });
-
-    // Re-enable hover behavior after the mouse leaves
-    wrapper.addEventListener('mouseleave', () => {
-        wrapper.classList.remove('force-closed');
-    });
-});
-
-// Click anywhere outside closes any open dropdown
-document.addEventListener('click', e => {
-    dropdowns.forEach(wrapper => {
-        if (!wrapper.contains(e.target)) {
-            wrapper.classList.remove('open');
-        }
-    });
-});
-    if (!accept || !popup || !container) {
-        console.warn('Popup elements not found in DOM.');
-        return;
-    }
-     Array.from(closebtn).forEach((btn) => {
-    btn.addEventListener('click', () => {
-        if (btn.closest('#popup')) {
-            popup.style.display = 'none';
-            container.classList.remove('blurred');
-            body.style.overflow = 'visible';
-        } else if (btn.closest('#mobile-view')) {
-            mobileView.style.display = 'none';
-            container.classList.remove('blurred');
-            body.style.overflow = 'visible';
-        }
-    });
-});
-
-
-    accept.addEventListener('click', () => {
-        popup.style.display = 'none';
-        container.classList.remove('blurred');
-        body.style.overflow = 'visible';
-    });
-
-    window.addEventListener('scroll', () => {
-        if(screen.width < 420) {
-            document.body.classList.remove('scrolled');
-            return;
-        }
-        else{
-         document.body.classList.toggle('scrolled', window.scrollY > 750);
-
-        }
-    });
+    const dropdowns = document.querySelectorAll('.dropdown-wrapper');
+    const hidePages = document.querySelectorAll('.mobile-hidden-pages');
 
     function detectMacOSVersion() {
         const ua = navigator.userAgent;
@@ -103,9 +35,9 @@ document.addEventListener('click', e => {
         return { isMac: true, version: versionString, major, minor, patch, versionName };
     }
 
-    var isMacDetected = false; // remembered across both checks
+    var isMacDetected = false; 
 
-    // --- Mac popup check ---
+ 
     window.addEventListener('load', () => {
         const macInfo = detectMacOSVersion();
         console.log('macOS detection result:', macInfo);
@@ -123,23 +55,102 @@ document.addEventListener('click', e => {
         }
     });
 
-    // --- Mobile view check, separated so it re-runs on resize too ---
+   
     function checkMobileView() {
         var screenWidth = window.innerWidth;
-
+        console.log('Current screen width:', screenWidth);
         if (screenWidth < 420) {
             popup.style.display = 'none';
             container.classList.add('blurred');
             body.style.overflow = 'hidden';
+            hidePages.forEach(page => {
+                page.style.display = 'none';
+            });
+           
         } else {
             popup.style.display = isMacDetected ? 'block' : 'none';
             container.classList.toggle('blurred', isMacDetected);
             body.style.overflow = isMacDetected ? 'hidden' : 'visible';
+             hidePages.forEach(page => {
+                page.style.display = 'intial';
+               
+            });
         }
+       
     }
    
 
     window.addEventListener('load', checkMobileView);
     window.addEventListener('resize', checkMobileView);
-    
+
+
+    dropdowns.forEach(wrapper => {
+    const arrow = wrapper.querySelector('.arrow-down');
+    if (!arrow) return;
+
+    arrow.addEventListener('click', () => {
+        const isShowing =
+            wrapper.classList.contains('open') ||
+            (wrapper.matches(':hover') && !wrapper.classList.contains('force-closed'));
+
+        if (isShowing) {
+            wrapper.classList.remove('open');
+            wrapper.classList.add('force-closed');
+        } else {
+            wrapper.classList.add('open');
+            wrapper.classList.remove('force-closed');
+        }
+    });
+
+  
+    wrapper.addEventListener('mouseleave', () => {
+        wrapper.classList.remove('force-closed');
+    });
 });
+
+document.addEventListener('click', e => {
+    dropdowns.forEach(wrapper => {
+        if (!wrapper.contains(e.target)) {
+            wrapper.classList.remove('open');
+        }
+    });
+});
+
+
+
+
+   closebtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (mobileView.style.display !== 'none') {
+                mobileView.style.display = 'none';
+            }
+            popup.style.display = 'none';
+            container.classList.remove('blurred');
+            body.style.overflow = 'visible';
+        });
+    });
+
+ container.addEventListener('click', () => {
+            const mobileVisible = getComputedStyle(mobileView).display !== 'none';
+            if (container.classList.contains('blurred') && mobileVisible) {
+                popup.style.display = 'none';
+                mobileView.style.display = 'none';
+                container.classList.remove('blurred');
+                body.style.overflow = 'visible';    
+            }
+        });
+
+
+    accept.addEventListener('click', () => {
+        popup.style.display = 'none';
+        container.classList.remove('blurred');
+        body.style.overflow = 'visible';
+    });
+
+    window.addEventListener('scroll', () => {
+         document.body.classList.toggle('scrolled', window.scrollY > 750);
+
+        
+    });
+});
+

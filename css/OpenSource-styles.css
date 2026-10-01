@@ -124,6 +124,7 @@ header{
     transition: all 0.4s ease-in-out; 
 }
 .scrolled header #buttons-center{
+    margin-top: 1vw;
     margin-right: 10vw;
 }
 .scrolled header #green-btn a {
@@ -253,8 +254,6 @@ header{
     justify-self: end;
     display: block;
 }
-
-
 
 .dropdown-wrapper:hover:not(.force-closed) .hover-box,
 .dropdown-wrapper.open .hover-box {

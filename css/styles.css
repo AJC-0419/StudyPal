@@ -51,7 +51,7 @@ a{
     margin: 0 auto; 
 }
 
-#close{
+.close{
     position: absolute;
     display: flex;
     top: 10%;
@@ -124,6 +124,7 @@ header{
     transition: all 0.4s ease-in-out; 
 }
 .scrolled header #buttons-center{
+    margin-top: 1vw;
     margin-right: 10vw;
 }
 .scrolled header #green-btn a {
@@ -253,8 +254,6 @@ header{
     display: block;
 }
 
-
-
 .dropdown-wrapper:hover:not(.force-closed) .hover-box,
 .dropdown-wrapper.open .hover-box {
     opacity: 1;
@@ -264,7 +263,6 @@ header{
     pointer-events: auto;
 }
 
-/* Optional: flip the arrow when open */
 .arrow-down {
     transition: transform 0.15s ease;
 }
@@ -650,7 +648,9 @@ hr{
     z-index: 10;
 }
 
-#first-page, #sixth-page{
+#first-page{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

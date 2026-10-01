@@ -60,10 +60,11 @@ header{
     transition: all 0.4s ease-in-out; 
 }
 .scrolled header #buttons-center{
+    margin-top: 1vw;
     margin-right: 10vw;
 }
-.scrolled header #buttons-right a {
-    padding: 0.6em 1.2em; 
+.scrolled header #green-btn a {
+    padding: 0.6em 1.2em;
 }
 .dropdown-wrapper {
     position: relative;
