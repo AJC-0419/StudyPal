@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileView = document.getElementById('mobile-view');
     const dropdowns = document.querySelectorAll('.dropdown-wrapper');
     const hidePages = document.querySelectorAll('.mobile-hidden-pages');
+    const studypalDl = document.getElementById('get-study-pal-1');
 
     function detectMacOSVersion() {
         const ua = navigator.userAgent;
@@ -58,8 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
    
     function checkMobileView() {
         var screenWidth = window.innerWidth;
-        console.log('Current screen width:', screenWidth);
-        if (screenWidth < 420) {
+        if (screenWidth < 450) {
             popup.style.display = 'none';
             container.classList.add('blurred');
             body.style.overflow = 'hidden';
@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', checkMobileView);
     window.addEventListener('resize', checkMobileView);
 
+   
 
     dropdowns.forEach(wrapper => {
     const arrow = wrapper.querySelector('.arrow-down');
@@ -130,17 +131,15 @@ document.addEventListener('click', e => {
         });
     });
 
- container.addEventListener('click', () => {
-            const mobileVisible = getComputedStyle(mobileView).display !== 'none';
-            if (container.classList.contains('blurred') && mobileVisible) {
-                popup.style.display = 'none';
-                mobileView.style.display = 'none';
-                container.classList.remove('blurred');
-                body.style.overflow = 'visible';    
-            }
-        });
+ container.addEventListener('click', (e) => {
+    if (e.target.closest('#get-study-pal-1') || mobileView.contains(e.target)) return;
 
-
+    if (container.classList.contains('blurred') && getComputedStyle(mobileView).display !== 'none') {
+        mobileView.style.display = 'none';
+        container.classList.remove('blurred');
+        body.style.overflow = 'visible';
+    }
+});
     accept.addEventListener('click', () => {
         popup.style.display = 'none';
         container.classList.remove('blurred');
@@ -149,8 +148,21 @@ document.addEventListener('click', e => {
 
     window.addEventListener('scroll', () => {
          document.body.classList.toggle('scrolled', window.scrollY > 750);
-
         
     });
+     studypalDl.addEventListener('click', () => {
+        
+        if (window.innerWidth < 450) {
+            container.classList.add('blurred');
+            body.style.overflow = 'hidden';
+            mobileView.style.display = 'block';
+            
+        }
+         
+        else{
+            window.location.href = 'getstudypal.html';
+        }
+        
+    });     
 });
 

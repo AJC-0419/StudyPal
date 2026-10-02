@@ -636,7 +636,7 @@ hr{
 #mobile-view{
     display: none;
 }
-@media (max-width: 420px) {
+@media (max-width: 450px) {
 
 #mobile-view{
     display: flex;
@@ -727,8 +727,13 @@ hr{
     padding: 0.8em 1.6em;
   }
 
+  #features-link {
+   display:none;
+  }
+
   .cat-logo {
-    width: clamp(40px, 12vw, 56px);
+    top: clamp(-80px, -100%, -20px);
+    width:45px;
   }
  .footer-info {
         flex-direction: column;
