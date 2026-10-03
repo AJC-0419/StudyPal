@@ -17,34 +17,6 @@
     src: url('../fonts/instrument-sans/InstrumentSans-Bold.ttf');
 }
 
-
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Instrument-Sans';
-    scroll-behavior: smooth;
-}
-
-#container.blurred{
-    filter: blur(6px);
-    pointer-events: auto;
-}
-
-a{
-    font-size: 0.84rem;
-    text-decoration: none;    
-    color: black;  
-}
-#popup{
-    position: fixed;
-    inset: 0;        
-    margin: auto; 
-    width: fit-content;
-    height: fit-content;   
-    z-index: 2;
-    display: none;
-    overflow: hidden;
-}
 #popup-bg{
     position: relative;
     display: flex;
@@ -72,12 +44,6 @@ a{
     width: 48%;
     margin: 0 auto;
 }
-#group-buttons{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 5%;
-}
 #popup-body{
     font-family: "Instrument-Sans";
     font-size: 0.9rem;
@@ -86,6 +52,35 @@ a{
     font-size: 3rem;
     margin: 0;
 }
+#popup{
+    position: fixed;
+    inset: 0;        
+    margin: auto; 
+    width: fit-content;
+    height: fit-content;   
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+}
+
+#container.blurred{
+    filter: blur(6px);
+    pointer-events: auto;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Instrument-Sans';
+    scroll-behavior: smooth;
+}
+
+a{
+    font-size: 0.84rem;
+    text-decoration: none;    
+    color: black;  
+}
+
 
 #green-btn-2{
     width: 100%;
@@ -102,7 +97,7 @@ header{
     grid-template-columns: 1fr 2fr 1fr;
     padding: 1.3%;
     background: linear-gradient(#e6f7ec, 60%,transparent);
-    z-index: 1;
+    z-index: 20;
     transition: all 0.4s ease-in-out;
 }
 .scrolled header{

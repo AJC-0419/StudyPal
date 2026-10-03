@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    
 
-    dropdowns.forEach(wrapper => {
+dropdowns.forEach(wrapper => {
     const arrow = wrapper.querySelector('.arrow-down');
     if (!arrow) return;
 
@@ -148,8 +148,12 @@ document.addEventListener('click', e => {
 
     window.addEventListener('scroll', () => {
          document.body.classList.toggle('scrolled', window.scrollY > 750);
-        
+         dropdowns.forEach(wrapper => {
+            if (wrapper.classList.contains('open')) {
+                wrapper.classList.remove('open');
+            }
     });
+});
      studypalDl.addEventListener('click', () => {
         
         if (window.innerWidth < 450) {
@@ -157,7 +161,7 @@ document.addEventListener('click', e => {
             body.style.overflow = 'hidden';
             mobileView.style.display = 'block';
             
-        }
+        }   
          
         else{
             window.location.href = 'getstudypal.html';
