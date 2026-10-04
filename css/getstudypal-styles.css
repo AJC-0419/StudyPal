@@ -46,7 +46,7 @@ header{
     grid-template-columns: 1fr 2fr 1fr;
     padding: 1.3%;
     background: linear-gradient(#e6f7ec, 60%,transparent);
-    z-index: 20;
+    z-index: 10;
     transition: all 0.4s ease-in-out;
 }
 .scrolled header{
@@ -59,7 +59,7 @@ header{
     width: 96vw;
     box-sizing: border-box;
     padding: 1% 2%;
-    z-index: 2;
+     z-index: 10;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 100px;
@@ -168,7 +168,7 @@ header{
 .buttons-right a{
     font-family: 'Instrument-Sans';
     font-weight: bold;
-    background-color: #85F366;
+    background-color: #66F3D9;
     cursor: pointer;
     box-sizing: border-box;
     border-radius: 20px;
@@ -477,7 +477,7 @@ border-radius: 20px;
 
 #SITE-info{
     font-size: clamp(0.7rem, 1.6vw, 0.8rem);
-    width: 60%;
+    width: 30%;
 }
 
 

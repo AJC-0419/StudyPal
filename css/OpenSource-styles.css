@@ -102,7 +102,7 @@ header{
     grid-template-columns: 1fr 2fr 1fr;
     padding: 1.3%;
     background: linear-gradient(#e6f7ec, 60%,transparent);
-    z-index: 1;
+     z-index: 10;
     transition: all 0.4s ease-in-out;
 }
 .scrolled header{
@@ -115,7 +115,7 @@ header{
     width: 96vw;
     box-sizing: border-box;
     padding: 1% 2%;
-    z-index: 2;
+     z-index: 10;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 100px;
@@ -360,6 +360,8 @@ header{
     padding: clamp(12px, 2vw, 20px) clamp(8px, 1.5vw, 10px);
     transition: transform 0.50s ease;
     flex: 0;
+    cursor: pointer;
+    
 }
 
 .card-title {
@@ -401,7 +403,7 @@ header{
 }
 
 .card-body:hover .card-title div:nth-of-type(2) img{
-    transform: translateX(30px) translateY(-15px);
+    transform: translateX(20px) translateY(-15px);
 }
 
 .link{
@@ -650,7 +652,7 @@ a{
 
 #SITE-info{
     font-size: clamp(0.7rem, 1.6vw, 0.8rem);
-    width: 60%;
+    width: 30%;
 }
 
 
