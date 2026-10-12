@@ -259,7 +259,7 @@ body{
    margin-bottom: 5%;
 }
 .main-text{
-   font-size:  clamp(2rem, 7vw, 5rem);
+   font-size:  clamp(1.5rem, 7vw, 5rem);
    font-family: 'Instrument-Serif';
 }
 
@@ -313,7 +313,27 @@ body{
     padding-bottom:1%;
 }
 #subpage-windows{
-    padding-bottom: 1%;
+    display: flex;
+    background-color: #E1F8F4;
+    border-radius: 50px;
+    padding:5%;
+}
+#subpage-windows .main-text{
+    margin: 0;
+}
+
+#subpage-windows-text{
+    width: 65%;
+}
+
+#windows-content{
+    font-size: clamp(0.6rem, 2vw, 1.3rem);
+    padding-top: 3%;
+    width: 80%;
+}
+#subpage-windows-img{
+    padding-top:5%;
+    width: 90%;
 }
 
 #subpage-links{
@@ -442,7 +462,10 @@ background-color: #E1F8F4;
 align-items: center;
 padding-left:5%;
 border-radius: 20px;
+font-size: clamp(0.7rem, 1.5vw, 1rem);
 }
+
+
 
 .arrow-down-faq{
     justify-self: end;
