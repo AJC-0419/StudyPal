@@ -6,6 +6,7 @@
             }
     });
 });
+
 const dropdowns = document.querySelectorAll('.dropdown-wrapper');
 
 dropdowns.forEach(wrapper => {

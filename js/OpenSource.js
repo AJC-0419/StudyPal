@@ -7,6 +7,9 @@ const file = document.getElementsByName("html");
 const body = document.body;
 const dropdowns = document.querySelectorAll('.dropdown-wrapper');
 
+
+
+
 dropdowns.forEach(wrapper => {
     const arrow = wrapper.querySelector('.arrow-down');
     if (!arrow) return;

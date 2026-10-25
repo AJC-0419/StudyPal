@@ -215,6 +215,9 @@ header{
     
 }  
 
+.arrow-forward{
+    width: clamp(30px, 3vw, 90px);
+}
 
 #up-button{
     position: fixed;

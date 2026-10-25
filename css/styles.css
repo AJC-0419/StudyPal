@@ -364,10 +364,7 @@ header{
     padding: 0;
 }
 
-.download-arrow{
-    width: clamp(14px, 3vw, 20px);
-    height: auto;
-}
+
 
 #second-page{
    margin:0;
