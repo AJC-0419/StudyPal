@@ -38,7 +38,6 @@ StudyPal's website is a 4-page informational website designed to introduce visit
 - [x] Hover animations and transition polish
 - [ ] Finalize Features page content
 - [ ] Complete Download flow for "Getting StudyPal"
-- [ ] Populate Open Source page (licensing, repo links, contribution guide)
 - [ ] Populate Resources page with finalized materials
 - [ ] Final content, and Responsiveness of all pages
 - [ ] Official launch
