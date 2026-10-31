@@ -17,7 +17,7 @@ StudyPal's website is a 4-page informational website designed to introduce visit
 |------|-------------|
 | **Features** | Highlights StudyPal's core features and what it offers.|
 | **Getting StudyPal** | Triggered via a **Get Studypal** button|
-| **Open Source** | Details the open-source components of StudyPal, including licensing contribution info, and Github repository |
+| **Open Source** | Details the open-source components of StudyPal with a link to the Github repository |
 | **Resources** |Guides, documentation, or other helpful links for users. |
 
 ---
